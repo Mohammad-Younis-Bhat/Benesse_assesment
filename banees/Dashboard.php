@@ -1,0 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION['user'])){
+    require_once('common/header.php');
+    require_once('views/dashboard.php');
+    require_once('common/footer.php');
+}else{
+    header("location:index.php");
+}
+?>
